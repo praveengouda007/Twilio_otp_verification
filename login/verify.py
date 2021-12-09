@@ -3,8 +3,8 @@ from twilio.rest import Client
 from twilio.base.exceptions import TwilioRestException
 from rest_framework.response import Response
 import pdb
-client = Client('AC057eb0fda66b130a042ed7196ba0ffa9', '99d77deff0b0c761c5efed9915daaca7')
-verify = client.verify.services('VAefd96c6b41c05b078b506a9e8c4ab6f4')
+client = Client('AC057eb0fda66b130a042ed7196ba0ffa9', '0577b4fe219bdfe4aef82665477c7bea')
+verify = client.verify.services('VAfdd5dabf289d15ffcbc869163e22eae3')
 
 
 def send(phone):

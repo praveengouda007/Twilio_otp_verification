@@ -35,11 +35,8 @@ class Otp(APIView):
         if verify:
             return Response(phone+' is verified successfully')
         else:
-<<<<<<< HEAD
             return Response('Incorrect OTP, Please try again', status=status.HTTP_400_BAD_REQUEST)
-=======
-            return Response('Incorrect OTP', status=status.HTTP_400_BAD_REQUEST)
->>>>>>> bb01b8703d5ef1ce9f5adab1924b3fbf93ca1136
+
 
 
 class LoginView(APIView):
