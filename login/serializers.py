@@ -18,5 +18,6 @@ class UserSerializer(serializers.ModelSerializer):
         instance.save()
         return instance
 
+
 class VerifySerializer(serializers.ModelSerializer):
     code = serializers.CharField(max_length=8, required=True)

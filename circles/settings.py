@@ -41,6 +41,7 @@ INSTALLED_APPS = [
     'login',
     'Appcircle',
     'corsheaders',
+    'ProductsApp',
 ]
 
 MIDDLEWARE = [
@@ -133,3 +134,6 @@ STATIC_URL = '/static/'
 AUTH_USER_MODEL = 'login.User'
 CORS_ORIGIN_ALLOW_ALL = True
 CORS_ALLOW_CREDENTIALS = True
+
+MEDIA_URL = '/media/'
+MEDIA_ROOT = os.path.join(BASE_DIR, "media")

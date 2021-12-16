@@ -1,16 +1,21 @@
 from django.shortcuts import render
-from .serializers import UserSerializer,VerifySerializer
+from .serializers import UserSerializer, VerifySerializer
 from rest_framework.views import APIView
 from rest_framework import viewsets
 from rest_framework.response import Response
 from .models import User
-from django.conf import settings 
 from rest_framework.exceptions import AuthenticationFailed
 import jwt, datetime
 from rest_framework.exceptions import status
 from .verify import *
+from rest_framework import status
 import pdb
-
+from rest_framework import viewsets
+from rest_framework.mixins import ListModelMixin, CreateModelMixin,\
+    DestroyModelMixin, UpdateModelMixin, RetrieveModelMixin
+from rest_framework import generics
+from rest_framework import permissions
+from django.http import JsonResponse
 
 class RegisterView(APIView):
     def post(self, request):
@@ -23,20 +28,16 @@ class RegisterView(APIView):
         print(ph)
         return Response({'details': 'please check otp'})
 
-
 class Otp(APIView):
     def post(self, request):
-
         phone = request.data['phone']
         code = request.data['code']
         verify = check(phone, code)
-
         print(verify)
         if verify:
-            return Response(phone+' is verified successfully')
+            return Response(phone+ 'is verified', status=status.HTTP_200_OK)
         else:
             return Response('Incorrect OTP, Please try again', status=status.HTTP_400_BAD_REQUEST)
-
 
 
 class LoginView(APIView):
@@ -75,10 +76,11 @@ class UserView(APIView):
             raise AuthenticationFailed('Unauthenticated!')
     
         try:
-            payload = jwt.decode(token, 'secret',algorithm=['HS256'])
+            payload = jwt.decode(token, 'secret', algorithm=['HS256'])
         except jwt.ExpiredSignatureError:
             raise AuthenticationFailed('Unauthenticated!')
 
         user = User.objects.filter(id=payload['id']).first()
         serializer = UserSerializer(user)
         return Response(serializer.data)
+

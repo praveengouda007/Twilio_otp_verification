@@ -3,7 +3,12 @@
   <component name="ChangeListManager">
     <list default="true" id="b37bcf3f-037c-472d-ba2b-e8e6398bc8c4" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Appcircle/serializers.py" beforeDir="false" afterPath="$PROJECT_DIR$/Appcircle/serializers.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/circles/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/circles/settings.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/circles/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/circles/urls.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/login/serializers.py" beforeDir="false" afterPath="$PROJECT_DIR$/login/serializers.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/login/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/login/urls.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/login/verify.py" beforeDir="false" afterPath="$PROJECT_DIR$/login/verify.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/login/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/login/views.py" afterDir="false" />
     </list>
