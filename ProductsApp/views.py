@@ -27,7 +27,7 @@ class Productapi(APIView):
     file_serializer = ProductSerializer(data=request.data)
 
     if file_serializer.is_valid():
-        time.sleep(10) #2 minutes time delay for process
+        time.sleep(120) #2 minutes time delay for process
 
         file_serializer.save()
 
