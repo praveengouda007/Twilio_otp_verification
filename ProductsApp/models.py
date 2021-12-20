@@ -8,9 +8,11 @@ class Brand(models.Model):
         return self.name
 
 class Product(models.Model):
-    brand = models.OneToOneField(Brand, on_delete=models.CASCADE)
-    name = models.FileField(null=True, blank=True, upload_to='image/')
-    uploaded_at = models.DateTimeField(auto_now_add=True)
+    brand = models.ForeignKey(Brand, on_delete=models.CASCADE)
+    name = models.CharField(max_length=30, null=True, blank=True)
+    category = models.CharField(max_length=30, null= True, blank = True)
+    description = models.CharField(max_length=500, null =True, blank=True)
 
     def __str__(self):
-        return self.brand
+        return self.name
+
