@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b37bcf3f-037c-472d-ba2b-e8e6398bc8c4" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/file/file_6AEfxA6.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProductsApp/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/ProductsApp/views.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
