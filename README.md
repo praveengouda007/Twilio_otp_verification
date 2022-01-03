@@ -1,4 +1,4 @@
-# Custom User integrating with Twilio to verify Phone  & App circles and Products App 
+# Custom User integration with Twilio to verify Phone & Cretaed Apps circles and Products.
 Creation of Custom User. 
 (Json Web Token)Jwt Authentication.
 Integrating Twilio with exsiting project to verify phone number of User.
