@@ -1,4 +1,4 @@
-# Twilio_otp_verification
+# Custom User integrating with Twilio to verify Phone  & App circles and Products App 
 Creation of Custom User. 
 (Json Web Token)Jwt Authentication.
 Integrating Twilio with exsiting project to verify phone number of User.
