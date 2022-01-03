@@ -2,7 +2,20 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b37bcf3f-037c-472d-ba2b-e8e6398bc8c4" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProductsApp/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/ProductsApp/admin.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProductsApp/apps.py" beforeDir="false" afterPath="$PROJECT_DIR$/ProductsApp/apps.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProductsApp/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/ProductsApp/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProductsApp/serializer.py" beforeDir="false" afterPath="$PROJECT_DIR$/ProductsApp/serializer.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProductsApp/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/ProductsApp/urls.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ProductsApp/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/ProductsApp/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/circles/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/circles/settings.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/login/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/login/admin.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/login/serializers.py" beforeDir="false" afterPath="$PROJECT_DIR$/login/serializers.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/login/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/login/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/login/verify.py" beforeDir="false" afterPath="$PROJECT_DIR$/login/verify.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/login/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/login/views.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -19,6 +32,23 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="GitSEFilterConfiguration">
+    <file-type-list>
+      <filtered-out-file-type name="LOCAL_BRANCH" />
+      <filtered-out-file-type name="REMOTE_BRANCH" />
+      <filtered-out-file-type name="TAG" />
+      <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
+    </file-type-list>
+  </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/login/views.py" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/ProductsApp/urls.py" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/ProductsApp/serializer.py" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/login/verify.py" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/login/urls.py" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/circles/urls.py" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/ProductsApp/models.py" root0="FORCE_HIGHLIGHTING" />
+  </component>
   <component name="ProjectId" id="21oICWI0lX5LLssFMHmSBYMG4KV" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
@@ -27,6 +57,7 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -38,6 +69,17 @@
       <updated>1638600885595</updated>
     </task>
     <servers />
+  </component>
+  <component name="Vcs.Log.History.Properties">
+    <option name="COLUMN_ID_ORDER">
+      <list>
+        <option value="Default.Root" />
+        <option value="Default.Author" />
+        <option value="Default.Date" />
+        <option value="Default.Subject" />
+        <option value="Space.CommitStatus" />
+      </list>
+    </option>
   </component>
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">

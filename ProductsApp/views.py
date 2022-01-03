@@ -3,7 +3,6 @@ from django.shortcuts import render
 from rest_framework import generics
 from .serializer import ProductSerializer, BrandSerializer
 from django.core.files.base import ContentFile
-import csv
 from rest_framework.views import APIView
 from rest_framework.parsers import MultiPartParser, FormParser
 from rest_framework.response import Response
@@ -13,6 +12,10 @@ from .models import Brand, Product
 from django.core.files.storage import FileSystemStorage
 import time
 from rest_framework.renderers import JSONRenderer
+from background_task import background
+from django.http import HttpResponse
+import csv
+from apscheduler.schedulers.background import BackgroundScheduler
 
 # Create your views here.
 class BrandView(APIView):
@@ -38,11 +41,10 @@ class ProductView(APIView):
     #     serializer.save()
     #     return Response(serializer.data)
 
-
-
 fs = FileSystemStorage(location='file/')
+# @background(schedule=30)
+class Uploading_csv(APIView):
 
-class FileUploadView(APIView):
     def post(self, request):
         file = request.FILES["name"]
         content = file.read()
@@ -63,7 +65,6 @@ class FileUploadView(APIView):
                 category,
                 description,
             ) = row
-
             product_list.append(
                 Product(
                     brand_id=brand,
@@ -72,11 +73,24 @@ class FileUploadView(APIView):
                     description=description,
                 )
             )
-        Product.objects.bulk_create(product_list)
-        time.sleep(10)   #gave only 10 seconds delay for time saving
-        return Response("Uploaded Successfully")
+            # from pytz import UTC
+            from ProductsApp.schedule import start
+            background = start()
+            print(background)
+            # scheduler = BackgroundScheduler(product_list=product_list, timezone=UTC)
+            Product.objects.bulk_create(product_list)
 
+            return Response("Uploaded Successfully")
 
+def export_products_csv(request):
+    response = HttpResponse(content_type='text/csv')
+    response['Content-Disposition'] = 'attachment; filename="file.csv"'
 
+    writer = csv.writer(response)
+    writer.writerow(['brand', 'name', 'category', 'description'])
 
+    products = Product.objects.all().values_list('brand', 'name', 'category', 'description')
+    for product in products:
+        writer.writerow(product)
 
+    return response

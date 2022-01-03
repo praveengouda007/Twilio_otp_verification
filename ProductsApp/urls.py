@@ -1,7 +1,9 @@
-from .views import ProductView, BrandView, FileUploadView
+from .views import ProductView, BrandView, Uploading_csv
 from django.conf.urls import url
 from django.urls import path, include
 from rest_framework import routers
+from ProductsApp import views
+from django.views.decorators.csrf import csrf_exempt
 
 # router = routers.SimpleRouter()
 # router.register("Product_name/", ProductUpload, basename='Product')
@@ -12,5 +14,8 @@ from rest_framework import routers
 urlpatterns = [
     path('brand/', BrandView.as_view()),
     path('list/', ProductView.as_view()),
-    path('upload/', FileUploadView.as_view()),
+    path('upload/', Uploading_csv.as_view()),
+    path('export/', views.export_products_csv),
+
+    # path('ex/', views.exportapi),
 ]
