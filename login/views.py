@@ -10,14 +10,6 @@ import jwt, datetime
 from rest_framework.exceptions import status
 from .verify import *
 from rest_framework import status
-import pdb
-from rest_framework import viewsets
-from rest_framework.mixins import ListModelMixin, CreateModelMixin,\
-    DestroyModelMixin, UpdateModelMixin, RetrieveModelMixin
-from rest_framework.generics import GenericAPIView
-from rest_framework import generics
-from rest_framework import permissions
-from django.http import JsonResponse
 
 class RegisterView(APIView):
 
@@ -148,3 +140,12 @@ class UserVerify(APIView):
                 return Response('Incorrect OTP, Please try again', status=status.HTTP_400_BAD_REQUEST)
 
         return Response(serializer.data)
+
+class LogoutView(APIView):
+    def post(self, request):
+        response = Response()
+        response.delete_cookie('jwt')
+        response.data = {
+            'message': "success"
+        }
+        return response

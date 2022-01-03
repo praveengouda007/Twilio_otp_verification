@@ -4,14 +4,9 @@ from rest_framework import generics
 from .serializer import ProductSerializer, BrandSerializer
 from django.core.files.base import ContentFile
 from rest_framework.views import APIView
-from rest_framework.parsers import MultiPartParser, FormParser
 from rest_framework.response import Response
-from rest_framework.exceptions import status
-from rest_framework import viewsets
 from .models import Brand, Product
 from django.core.files.storage import FileSystemStorage
-import time
-from rest_framework.renderers import JSONRenderer
 from background_task import background
 from django.http import HttpResponse
 import csv
